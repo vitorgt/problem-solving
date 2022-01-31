@@ -1,0 +1,95 @@
+#!/usr/bin/python3
+
+import os, re, sys
+
+
+def patternCreator(id: str = "", uri: str = "", ext: str = ""):
+    if id == "" and uri == "" and ext == "":
+        help()
+    elif uri == "" and ext == "":
+        return rf"^{id}.*"
+    elif id == "" and ext == "":
+        return rf".*{uri}.*"
+    elif id == "" and uri == "":
+        return rf".*{ext}$"
+    elif ext == "":
+        return rf"(^{id}\.{uri}.*)|(^{id}.*)|(.*{uri}.*)"
+    elif uri == "":
+        return rf"(^{id}.*{ext}$)|(^{id}.*)"
+    elif id == "":
+        return rf"(.*{uri}\.{ext}$)|(.*{uri}.*)"
+    else:
+        return (
+            rf"(^{id}\.{uri}\.{ext}$)|(^{id}.*{ext}$)|(.*{uri}\.{ext}$)"
+        )
+
+
+def find(pattern: str):
+    result = []
+
+    for root, dirs, files in os.walk("./"):
+        for file in files:
+            if re.match(pattern, file):
+                result.append(os.path.join(root, file))
+
+    return result
+
+
+def help():
+    print("Usage (ordered):")
+    print("./n id [uri] [ext]")
+    print("Usage (any order with flags):")
+    print("./n [-i id] [-u uri] [-e ext]")
+    sys.exit(1)
+
+
+def main():
+    id = ""
+    uri = ""
+    ext = ""
+
+    if "--help" in sys.argv:
+        help()
+
+    if "-i" in sys.argv or "-u" in sys.argv or "-e" in sys.argv:
+        if "-i" in sys.argv:
+            id = sys.argv[sys.argv.index("-i") + 1]
+        if "-u" in sys.argv:
+            uri = sys.argv[sys.argv.index("-u") + 1]
+        if "-e" in sys.argv:
+            ext = sys.argv[sys.argv.index("-e") + 1]
+    else:
+        if len(sys.argv) <= 1 or len(sys.argv) > 4:
+            help()
+        id = sys.argv[1]
+        if len(sys.argv) > 2:
+            uri = sys.argv[2]
+        if len(sys.argv) > 3:
+            ext = sys.argv[3]
+
+    if id != "":
+        id = id.zfill(4)
+
+    found = find(patternCreator(id, uri, ext))
+
+    if len(found) == 0:
+        if id == "" or uri == "":
+            print("No files found")
+        else:
+            path = f"./do/{id}.{uri}.{(ext, 'cpp')[ext == '']}"
+            os.system(f"touch {path}")
+            print(f"Created {path}")
+    else:
+        print("Found files:")
+        for file in found:
+            print(file)
+        if id != "" and uri != "":
+            create = input("Create new?\n")
+            if "y" in create:
+                path = f"./do/{id}.{uri}.{(ext, 'cpp')[ext == '']}"
+                os.system(f"touch {path}")
+                print(f"Created {path}")
+
+
+if __name__ == "__main__":
+    main()
