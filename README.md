@@ -4,7 +4,7 @@ Repository to store my solutions of contests' problems.
 
 ## Accounts
 
-<table style="margin-left: auto; margin-right: auto">
+<table>
   <tbody>
     <tr>
       <td>
