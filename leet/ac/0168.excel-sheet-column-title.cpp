@@ -2,7 +2,8 @@ class Solution {
   public:
     string convertToTitle(int n) {
         string ans = "";
-        if (!n) return ans;
+        if (!n)
+            return ans;
         while (n > 0) {
             n--;
             ans = (char)((n % 26) + 'A') + ans;

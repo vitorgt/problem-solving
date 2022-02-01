@@ -1,9 +1,10 @@
-class Solution {  // O(n) time, O(1) memory
+class Solution { // O(n) time, O(1) memory
   public:
     bool canConstruct(string ransomNote, string magazine) {
         int r = 0, m = 0;
         const int rl = ransomNote.length(), ml = magazine.length();
-        if (ml < rl) return false;
+        if (ml < rl)
+            return false;
         sort(ransomNote.begin(), ransomNote.end());
         sort(magazine.begin(), magazine.end());
         for (; r < rl && m < ml; r++) {
@@ -16,12 +17,13 @@ class Solution {  // O(n) time, O(1) memory
                 break;
             }
         }
-        if (r < rl) return false;
+        if (r < rl)
+            return false;
         return true;
     }
 };
 
-class SolutionB {  // O(n) time, O(n) memory
+class SolutionB { // O(n) time, O(n) memory
   public:
     bool canConstruct(string ransomNote, string magazine) {
         unordered_map<char, int> freq;

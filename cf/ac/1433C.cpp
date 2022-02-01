@@ -25,8 +25,7 @@ int main(int argc, const char **argv) {
             cout << -1 << endl;
             continue;
         }
-        for (auto &&i = pi.rbegin(); i != pi.rend() && !found;
-             i = next(i)) {
+        for (auto &&i = pi.rbegin(); i != pi.rend() && !found; i = next(i)) {
             for (int j : i->second) {
                 if ((j > 0 && p[j - 1] < p[j]) ||
                     (j < n - 1 && p[j + 1] < p[j])) {

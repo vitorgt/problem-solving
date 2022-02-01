@@ -9,7 +9,8 @@ class Solution {
         std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
         int ss = s.size(), maxSubS = 0;
-        if (ss < 2) return ss;
+        if (ss < 2)
+            return ss;
 
         unordered_map<char, int> m;
 
@@ -31,7 +32,8 @@ class SolutionB { // Fails
         std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
         size_t ss = s.size(), maxSubS = 0;
-        if (ss < 2) return ss;
+        if (ss < 2)
+            return ss;
 
         unordered_set<char> us;
 

@@ -1,14 +1,16 @@
 class SolutionA {
   public:
-    int maximumGap(vector<int>& nums) {
-        if (nums.size() < 2) return 0;
+    int maximumGap(vector<int> &nums) {
+        if (nums.size() < 2)
+            return 0;
 
         sort(nums.begin(), nums.end());
 
         int gap = 0;
 
         for (size_t i = 0; i < nums.size() - 1; i++)
-            if (nums[i + 1] - nums[i] > gap) gap = nums[i + 1] - nums[i];
+            if (nums[i + 1] - nums[i] > gap)
+                gap = nums[i + 1] - nums[i];
 
         return gap;
     }
@@ -16,11 +18,13 @@ class SolutionA {
 
 class SolutionB {
   public:
-    int maximumGap(vector<int>& nums) {
-        if (nums.size() < 2) return 0;
+    int maximumGap(vector<int> &nums) {
+        if (nums.size() < 2)
+            return 0;
 
         int hi = nums[0], lo = nums[0];
-        for (int n : nums) hi = max(hi, n), lo = min(lo, n);
+        for (int n : nums)
+            hi = max(hi, n), lo = min(lo, n);
 
         int bsize = max(int((hi - lo) / (nums.size() - 1)), 1);
         int nbuckets = (hi - lo) / bsize + 1;
@@ -43,8 +47,10 @@ class SolutionB {
         int gap = 0;
 
         for (size_t i = 0, j = 1; i < nbuckets - 1 && j < nbuckets; j++) {
-            while (buckets.find(j) == buckets.end() && j < nbuckets) j++;
-            if (j == bsize && buckets.find(j) == buckets.end()) break;
+            while (buckets.find(j) == buckets.end() && j < nbuckets)
+                j++;
+            if (j == bsize && buckets.find(j) == buckets.end())
+                break;
             gap = max(buckets[j].first - buckets[i].second, gap);
             i = j;
         }

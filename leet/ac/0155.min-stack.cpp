@@ -13,8 +13,7 @@ class MinStack {
     multiset<int> ms;
 
   public:
-    MinStack() {
-    }
+    MinStack() {}
 
     void push(int x) {
         st.push(x);
@@ -31,11 +30,7 @@ class MinStack {
         }
     }
 
-    int top() {
-        return st.top();
-    }
+    int top() { return st.top(); }
 
-    int getMin() {
-        return *ms.begin();
-    }
+    int getMin() { return *ms.begin(); }
 };

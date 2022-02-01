@@ -1,4 +1,4 @@
-class Solution {  // based on https://leetcode.com/lee215 solution
+class Solution { // based on https://leetcode.com/lee215 solution
   public:
     int brokenCalc(int X, int Y) {
         int ans = 0;
@@ -10,7 +10,7 @@ class Solution {  // based on https://leetcode.com/lee215 solution
     }
 };
 
-class SolutionB {  // doesnt work :c
+class SolutionB { // doesnt work :c
   private:
     const int INF = 0x3f3f3f3f;
     int maxOp = INF;
@@ -39,7 +39,8 @@ class SolutionB {  // doesnt work :c
 
   public:
     int brokenCalc(int X, int Y) {
-        if (X >= Y) return X - Y;
+        if (X >= Y)
+            return X - Y;
         this->Y = Y;
         this->YY = Y * 2;
         dp(X, 0);

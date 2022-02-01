@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int maxPerformance(int n, vector<int>& speed, vector<int>& efficiency,
+    int maxPerformance(int n, vector<int> &speed, vector<int> &efficiency,
                        int k) {
         vector<pair<int, int>> eng;
         for (size_t i = 0; i < n; i++)
@@ -10,7 +10,7 @@ class Solution {
         long long accSum = 0, ans = 0;
         priority_queue<int, vector<int>, greater<int>> pq;
 
-        for (auto& [e, s] : eng) {
+        for (auto &[e, s] : eng) {
             accSum += s;
             pq.push(s);
 

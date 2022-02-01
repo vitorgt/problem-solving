@@ -1,9 +1,10 @@
 class Solution {
   public:
-    int openLock(vector<string>& deadends, string target) {
+    int openLock(vector<string> &deadends, string target) {
         unordered_set<string> dead_ends(deadends.begin(), deadends.end());
 
-        if (dead_ends.count("0000")) return -1;
+        if (dead_ends.count("0000"))
+            return -1;
 
         queue<string> q({"0000"});
 
@@ -12,7 +13,8 @@ class Solution {
                 string curr = q.front();
                 q.pop();
 
-                if (curr == target) return level;
+                if (curr == target)
+                    return level;
 
                 // insert possible moves in queue
                 for (int i = 0; i < 4; i++) {
@@ -20,7 +22,8 @@ class Solution {
                         string neighbor = curr;
                         neighbor[i] =
                             (neighbor[i] - '0' + diff + 10) % 10 + '0';
-                        if (dead_ends.count(neighbor)) continue;
+                        if (dead_ends.count(neighbor))
+                            continue;
                         dead_ends.insert(neighbor); // mark as visited
                         q.push(neighbor);
                     }

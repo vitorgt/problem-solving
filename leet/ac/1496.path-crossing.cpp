@@ -8,7 +8,8 @@ class Solution {
         visited.insert({x, y});
 
         for (int i = 0; i < path.size(); ++i) {
-            if (path[i] == 'N') ++y;
+            if (path[i] == 'N')
+                ++y;
             else if (path[i] == 'S')
                 --y;
             else if (path[i] == 'E')
@@ -16,7 +17,8 @@ class Solution {
             else if (path[i] == 'W')
                 --x;
 
-            if (visited.count({x, y})) return true;
+            if (visited.count({x, y}))
+                return true;
             else
                 visited.insert({x, y});
         }

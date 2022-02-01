@@ -13,7 +13,7 @@ class Solution {
         return board;
     }
 
-    void solve(const vector<unordered_set<char>>& board, int n) {
+    void solve(const vector<unordered_set<char>> &board, int n) {
         if (n < 0) {
             vector<string> temp;
             for (auto p : positions) {
@@ -27,7 +27,8 @@ class Solution {
         }
 
         for (int i = 0; i <= n; i++)
-            if (board[i].empty()) return;
+            if (board[i].empty())
+                return;
 
         for (char i : board[n]) {
             positions.push_back(i);
@@ -43,7 +44,8 @@ class Solution {
         vector<unordered_set<char>> board(n);
 
         for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++) board[i].insert(j);
+            for (int j = 0; j < n; j++)
+                board[i].insert(j);
 
         solve(board, n - 1);
 

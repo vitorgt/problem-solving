@@ -2,7 +2,7 @@
 
 class Solution {
   private:
-    bool isValidSequence(TreeNode* root, vector<int>& arr, int i) {
+    bool isValidSequence(TreeNode *root, vector<int> &arr, int i) {
         if (root && i < arr.size()) {
             if (root->val == arr[i]) {
                 if (i == arr.size() - 1) {
@@ -18,7 +18,7 @@ class Solution {
     }
 
   public:
-    bool isValidSequence(TreeNode* root, vector<int>& arr) {
+    bool isValidSequence(TreeNode *root, vector<int> &arr) {
         return isValidSequence(root, arr, 0);
     }
 };

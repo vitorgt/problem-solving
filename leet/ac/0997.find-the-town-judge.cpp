@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int findJudge(int N, vector<vector<int>>& trust) {
+    int findJudge(int N, vector<vector<int>> &trust) {
         const int n = trust.size();
         unordered_map<int, int> trustedBy;
         vector<bool> trustNoOne(N, true);
@@ -9,7 +9,8 @@ class Solution {
             trustNoOne[trust[i][0] - 1] = false;
         }
         for (int i = 0; i < N; i++) {
-            if (trustNoOne[i] && trustedBy[i] == N - 1) return i + 1;
+            if (trustNoOne[i] && trustedBy[i] == N - 1)
+                return i + 1;
         }
         return -1;
     }

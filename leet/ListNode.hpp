@@ -10,7 +10,8 @@ class ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 
     static ListNode *fromVector(vector<int> v) {
-        if (v.empty()) return NULL;
+        if (v.empty())
+            return NULL;
 
         ListNode *head = new ListNode(v[0]);
         ListNode *aux = head;
@@ -24,7 +25,8 @@ class ListNode {
     }
 
     static void print(ListNode *head) {
-        if (!head) return;
+        if (!head)
+            return;
 
         ListNode *aux = head;
 

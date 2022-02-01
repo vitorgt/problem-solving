@@ -60,14 +60,14 @@ class LRUCacheB {
             this->left = NULL;
             this->right = r;
         }
-        ~Node() {
-        }
+        ~Node() {}
     };
     int capacity, used;
     Node *head, *tail;
     unordered_map<int, Node *> addr;
     void bubbleUp(Node *mv) {
-        if (!mv || !mv->left) return;
+        if (!mv || !mv->left)
+            return;
         if (head && head != mv) {
             head->left = mv;
         }

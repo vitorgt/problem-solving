@@ -14,7 +14,8 @@ class Solution { // Recursive
         std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
         if (root && root->left) {
-            if (root->next) root->right->next = root->next->left;
+            if (root->next)
+                root->right->next = root->next->left;
             root->left->next = root->right;
             connect(root->left);
             connect(root->right);
@@ -29,7 +30,8 @@ class Solution { // Iterative
     Node *connect(Node *root) {
         std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
-        if (!root || (!root->left && !root->right)) return root;
+        if (!root || (!root->left && !root->right))
+            return root;
 
         int lvl = 1, nxtlvl = 0;
         Node *at = NULL, *pastngb = NULL;

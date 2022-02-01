@@ -1,8 +1,9 @@
 class Solution {
   public:
-    int arrayNesting(vector<int>& nums) {
+    int arrayNesting(vector<int> &nums) {
         const int n = nums.size();
-        if (n == 0) return 0;
+        if (n == 0)
+            return 0;
         int maxLen = 0, temp = 0;
         for (int i = 0; i < n; i++) {
             int len = 0;
@@ -17,11 +18,12 @@ class Solution {
     }
 };
 
-class SolutionB {  // 855 / 856 test cases passed
+class SolutionB { // 855 / 856 test cases passed
   public:
-    int arrayNesting(vector<int>& nums) {
+    int arrayNesting(vector<int> &nums) {
         const int n = nums.size();
-        if (n == 0) return 0;
+        if (n == 0)
+            return 0;
         int maxLen = 0;
         for (int i = 0; i < n; i++) {
             int len = 0;
@@ -35,11 +37,12 @@ class SolutionB {  // 855 / 856 test cases passed
     }
 };
 
-class SolutionC {  // 854 / 856 test cases passed
+class SolutionC { // 854 / 856 test cases passed
   public:
-    int arrayNesting(vector<int>& nums) {
+    int arrayNesting(vector<int> &nums) {
         const int n = nums.size();
-        if (n == 0) return 0;
+        if (n == 0)
+            return 0;
         int maxLen = 1;
         for (int i = 0; i < n; i++) {
             vector<int> len(n, -1);

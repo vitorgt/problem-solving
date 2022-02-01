@@ -5,7 +5,8 @@ class Solution {
         int lastBegin = 0, half = 0, ss = s.size() - 1;
         for (int i = 0; i <= ss; i++) {
             if (s[i] == ' ' || i == ss) {
-                if (i == ss) i++;
+                if (i == ss)
+                    i++;
                 half = (i - lastBegin) / 2 + lastBegin;
                 for (int j = lastBegin, k = i - 1; j < half; j++, k--) {
                     swap(s[j], s[k]);

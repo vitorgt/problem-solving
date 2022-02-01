@@ -1,11 +1,11 @@
 class Solution {
   public:
-    int findMinArrowShots(vector<vector<int>>& points) {
+    int findMinArrowShots(vector<vector<int>> &points) {
         const int n = points.size();
-        if (n == 0) return 0;
-        sort(
-            points.begin(), points.end(),
-            [](vector<int>& i, vector<int>& j) { return i[1] < j[1]; });
+        if (n == 0)
+            return 0;
+        sort(points.begin(), points.end(),
+             [](vector<int> &i, vector<int> &j) { return i[1] < j[1]; });
         int ans = 1, maxX = points[0][1];
         for (int i = 1; i < n; ++i) {
             if (points[i][0] > maxX) {
@@ -17,11 +17,12 @@ class Solution {
     }
 };
 
-class SolutionB {  // my solution works, but slower
+class SolutionB { // my solution works, but slower
   public:
-    int findMinArrowShots(vector<vector<int>>& points) {
+    int findMinArrowShots(vector<vector<int>> &points) {
         const int n = points.size();
-        if (n == 0) return 0;
+        if (n == 0)
+            return 0;
         sort(points.begin(), points.end());
         map<int, int> arrows;
         map<int, int>::iterator it;
@@ -43,8 +44,7 @@ class SolutionB {  // my solution works, but slower
                 if (itt.second != arrows.end()) {
                     itt.second = next(itt.second, 1);
                 }
-                for (it = itt.first; it != itt.second;
-                     it = next(it, 1)) {
+                for (it = itt.first; it != itt.second; it = next(it, 1)) {
                     if ((it->first <= points[i][0] &&
                          points[i][0] <= it->second) ||
                         (it->first <= points[i][1] &&

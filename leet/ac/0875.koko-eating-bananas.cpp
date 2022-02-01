@@ -11,19 +11,22 @@ class Solution {
         for (size_t i = 0; i < piles.size(); i++) {
             // time i'll spend eating from this pile
             time += ceil(piles[i] / (float)k);
-            if (time > h) return false;
+            if (time > h)
+                return false;
         }
         return true;
     }
 
   public:
-    int minEatingSpeed(vector<int>& piles, int h) {
+    int minEatingSpeed(vector<int> &piles, int h) {
         int biggest = *max_element(piles.begin(), piles.end()), ans = biggest;
 
         int l = 1, m = 0, r = biggest;
 
-        if (piles.size() == 1) return ceil(piles[0] / (float)h);
-        if (piles.size() == h) return biggest;
+        if (piles.size() == 1)
+            return ceil(piles[0] / (float)h);
+        if (piles.size() == h)
+            return biggest;
 
         while (l <= r) {
             m = (l + r) / 2;
@@ -39,10 +42,10 @@ class Solution {
     }
 };
 
-int main(int argc, const char** argv) {
+int main(int argc, const char **argv) {
     std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
-    Solution* a = new Solution();
+    Solution *a = new Solution();
 
     vector<int> b({332484035, 524908576, 855865114, 632922376, 222257295,
                    690155293, 112677673, 679580077, 337406589, 290818316,

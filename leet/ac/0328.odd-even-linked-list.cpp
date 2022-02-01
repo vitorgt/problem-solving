@@ -2,8 +2,9 @@
 
 class Solution {
   public:
-    ListNode* oddEvenList(ListNode* head) {
-        if (!head || !head->next) return head;
+    ListNode *oddEvenList(ListNode *head) {
+        if (!head || !head->next)
+            return head;
         bool parity = true;
         ListNode *aux = head->next->next, *lastOdd = head;
         ListNode *evenHead = head->next, *lastEven = head->next;

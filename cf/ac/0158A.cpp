@@ -11,9 +11,12 @@ int main(int argc, const char **argv) {
 
     for (int i = 0; i < n; i++, adv++) {
         cin >> read;
-        if (read <= 0) break;
-        if (i + 1 == k) readk = read;
-        if (read < readk) break;
+        if (read <= 0)
+            break;
+        if (i + 1 == k)
+            readk = read;
+        if (read < readk)
+            break;
     }
 
     cout << adv << endl;

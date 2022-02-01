@@ -14,10 +14,12 @@ int main(int argc, const char **argv) {
         count = 0;
         for (int i = 1; i <= n; i++) {
             cin >> a;
-            if (a == 1) last = i;
+            if (a == 1)
+                last = i;
             else
                 count++;
-            if (last == -1) count = 0;
+            if (last == -1)
+                count = 0;
         }
         cout << count - (n - last) << endl;
     }

@@ -1,6 +1,6 @@
 class Solution {
   public:
-    vector<int> productExceptSelf(vector<int>& nums) {
+    vector<int> productExceptSelf(vector<int> &nums) {
         const int n = nums.size();
         vector<int> left(n + 1, 1), right(n + 1, 1), answer;
         for (int i = 0; i < n; i++) {

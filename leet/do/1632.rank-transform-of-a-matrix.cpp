@@ -57,7 +57,8 @@ int main(int argc, const char **argv) {
                                   {-17, -22, -39, 24}};
     vector<vector<int>> ans = solution->matrixRankTransform(matrix);
     for (auto &row : ans) {
-        for (auto &col : row) cout << col << ' ';
+        for (auto &col : row)
+            cout << col << ' ';
         cout << '\n';
     }
     return 0;

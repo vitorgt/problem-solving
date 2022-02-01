@@ -12,7 +12,8 @@ class Solution {
         while (hare != 1) {
             hare = squareDigitis(squareDigitis(hare));
             tortoise = squareDigitis(tortoise);
-            if (hare == 1) return true;
+            if (hare == 1)
+                return true;
             if (hare == tortoise) {
                 return false;
             }

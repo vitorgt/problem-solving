@@ -12,7 +12,8 @@ class Solution {
         vector<int> ans(r + 1);
 
         for (int k = r; k >= 0; k--) {
-            if (abs(nums[r]) > abs(nums[l])) ans[k] = nums[r] * nums[r--];
+            if (abs(nums[r]) > abs(nums[l]))
+                ans[k] = nums[r] * nums[r--];
             else
                 ans[k] = nums[l] * nums[l++];
         }
@@ -29,7 +30,8 @@ class SolutionB {
         int l = 0, r = 0, n = nums.size();
         vector<int> ans;
 
-        while (r < n && nums[r] < 0) r++;
+        while (r < n && nums[r] < 0)
+            r++;
         l = r - 1;
 
         while (l >= 0 && r < n) {

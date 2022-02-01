@@ -6,7 +6,8 @@ class Solution {
         ListNode *prevHead = new ListNode(-1, head);
         ListNode *fast = prevHead, *slow = prevHead;
 
-        while (n-- && fast) fast = fast->next;
+        while (n-- && fast)
+            fast = fast->next;
 
         while (fast->next) {
             slow = slow->next;
@@ -29,10 +30,12 @@ class SolutionB { // Fails
             nCopy = n;
             slowPrev = slow;
             slow = slow->next;
-            while (nCopy-- && fast) fast = fast->next;
+            while (nCopy-- && fast)
+                fast = fast->next;
         }
 
-        if (slowPrev == head) head = head->next;
+        if (slowPrev == head)
+            head = head->next;
         else if (slowPrev->next)
             slowPrev->next = slowPrev->next->next;
         else

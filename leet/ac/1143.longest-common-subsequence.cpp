@@ -1,4 +1,4 @@
-class Solution {  // based on leetcode.com/votrubac solution
+class Solution { // based on leetcode.com/votrubac solution
   public:
     int longestCommonSubsequence(string text1, string text2) {
         const int l1 = text1.length(), l2 = text2.length();

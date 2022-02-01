@@ -12,13 +12,16 @@ class Solution {
         int p1 = 0, p2 = 0, minLenS = 0;
 
         unordered_map<char, vector<int>> posS;
-        for (int i = 0; i < n; i++) posS[s[i]].push_back(i);
+        for (int i = 0; i < n; i++)
+            posS[s[i]].push_back(i);
 
         unordered_map<char, int> countT;
-        for (int i = 0; i < m; i++) countT[t[i]]++;
+        for (int i = 0; i < m; i++)
+            countT[t[i]]++;
 
         for (auto &cT : countT) {
-            if (posS[cT.first].size() < cT.second) return "";
+            if (posS[cT.first].size() < cT.second)
+                return "";
             else if (posS[cT.first].size() == cT.second) {
                 p1 = min(p1, posS[cT.first][0]);
                 p2 = max(p2, posS[cT.first][cT.second - 1]);

@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int countElements(vector<int>& arr) {
+    int countElements(vector<int> &arr) {
         set<int> a(arr.begin(), arr.end());
         int c = 0;
         for (int i : arr) {

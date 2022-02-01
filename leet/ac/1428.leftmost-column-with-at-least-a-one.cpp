@@ -27,8 +27,7 @@ class Solution {
             if (count > 1) {
                 h = m - 1;
             } else if (count == 1) {
-                while (lastC >= 0 &&
-                       binaryMatrix.get(lastL, lastC) == 1) {
+                while (lastC >= 0 && binaryMatrix.get(lastL, lastC) == 1) {
                     lastC--;
                 }
                 return lastC + 1;

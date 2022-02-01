@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int maxScore(vector<int>& cardPoints, int k) {
+    int maxScore(vector<int> &cardPoints, int k) {
         int sum = accumulate(cardPoints.begin(), cardPoints.begin() + k, 0);
         int ans = sum;
         for (int l = k - 1, r = cardPoints.size() - 1; l >= 0; l--, r--) {
@@ -13,8 +13,9 @@ class Solution {
 
 class SolutionA {
   private:
-    int dp(deque<int>& cardPoints, int k, int sum) {
-        if (k == 0) return sum;
+    int dp(deque<int> &cardPoints, int k, int sum) {
+        if (k == 0)
+            return sum;
 
         int head = *cardPoints.begin();
         int tail = *prev(cardPoints.end());
@@ -31,7 +32,7 @@ class SolutionA {
     }
 
   public:
-    int maxScore(vector<int>& cardPoints, int k) {
+    int maxScore(vector<int> &cardPoints, int k) {
         deque<int> cardPointsD(cardPoints.begin(), cardPoints.end());
         return dp(cardPointsD, k, 0);
     }

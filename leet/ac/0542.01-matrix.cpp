@@ -12,7 +12,8 @@ class Solution {
          * (PS: Everything greater than that can be considered at infinity)
          */
         const int INF = r + c;
-        if (mat[0][0] == 1) mat[0][0] = INF;
+        if (mat[0][0] == 1)
+            mat[0][0] = INF;
 
         // Part 1: Up & Left
         /**
@@ -41,7 +42,8 @@ class Solution {
          * [x][ ][ ][ ]
          */
         for (int i = 1; i < r; i++) {
-            if (mat[i][0] == 0) continue;
+            if (mat[i][0] == 0)
+                continue;
             mat[i][0] = mat[i - 1][0] + 1;
         }
         /**
@@ -51,7 +53,8 @@ class Solution {
          * [ ][ ][ ][ ]
          */
         for (int j = 1; j < c; j++) {
-            if (mat[0][j] == 0) continue;
+            if (mat[0][j] == 0)
+                continue;
             mat[0][j] = mat[0][j - 1] + 1;
         }
         /**
@@ -62,7 +65,8 @@ class Solution {
          */
         for (int i = 1; i < r; i++) {
             for (int j = 1; j < c; j++) {
-                if (mat[i][j] == 0) continue;
+                if (mat[i][j] == 0)
+                    continue;
                 mat[i][j] = min(mat[i - 1][j], mat[i][j - 1]) + 1;
             }
         }
@@ -75,7 +79,8 @@ class Solution {
          * [ ][ ][ ][ ]
          */
         for (int i = r - 2; i >= 0; i--) {
-            if (mat[i][c1] == 0) continue;
+            if (mat[i][c1] == 0)
+                continue;
             mat[i][c1] = min(mat[i][c1], mat[i + 1][c1] + 1);
         }
         /**
@@ -85,7 +90,8 @@ class Solution {
          * [x][x][x][ ]
          */
         for (int j = c - 2; j >= 0; j--) {
-            if (mat[r1][j] == 0) continue;
+            if (mat[r1][j] == 0)
+                continue;
             mat[r1][j] = min(mat[r1][j], mat[r1][j + 1] + 1);
         }
         /**
@@ -96,7 +102,8 @@ class Solution {
          */
         for (int i = r - 2; i >= 0; i--) {
             for (int j = c - 2; j >= 0; j--) {
-                if (mat[i][j] == 0) continue;
+                if (mat[i][j] == 0)
+                    continue;
                 mat[i][j] =
                     min(mat[i][j], min(mat[i + 1][j], mat[i][j + 1]) + 1);
             }

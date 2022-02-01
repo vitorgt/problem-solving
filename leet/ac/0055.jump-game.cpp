@@ -1,6 +1,6 @@
 class Solution {
   public:
-    bool canJump(vector<int>& nums) {
+    bool canJump(vector<int> &nums) {
         const int n = nums.size();
         int last = 0;
         vector<bool> vis(n, false);

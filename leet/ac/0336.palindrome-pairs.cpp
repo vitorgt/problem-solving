@@ -3,7 +3,8 @@ class Solution {
     bool isPalindrome(string a) {
         int l = 0, r = a.size() - 1;
         while (l < r)
-            if (a[l++] != a[r--]) return false;
+            if (a[l++] != a[r--])
+                return false;
         return true;
     }
 
@@ -44,14 +45,16 @@ class SolutionA { // works, tle
     bool isPalindrome(string a) {
         int l = 0, r = a.size() - 1;
         while (l < r)
-            if (a[l++] != a[r--]) return false;
+            if (a[l++] != a[r--])
+                return false;
         return true;
     }
 
   public:
     vector<vector<int>> palindromePairs(vector<string> &words) {
         vector<vector<int>> ans;
-        if (words.size() == 1) return ans;
+        if (words.size() == 1)
+            return ans;
         for (size_t i = 0; i < words.size(); i++) {
             for (size_t j = i + 1; j < words.size(); j++) {
                 if (isPalindrome(words[i] + words[j])) {

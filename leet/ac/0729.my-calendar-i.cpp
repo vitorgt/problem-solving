@@ -7,7 +7,8 @@ class MyCalendarWOW {
 
     bool book(int start, int end) {
         auto it = s.upper_bound(start);
-        if (it != s.end() && (*it).second < end) return false;
+        if (it != s.end() && (*it).second < end)
+            return false;
         s[end] = start;
         return true;
     }

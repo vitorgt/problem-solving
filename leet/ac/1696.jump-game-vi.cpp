@@ -7,10 +7,12 @@ class Solution {
         for (size_t i = 1; i < n; i++) {
             nums[i] = nums[dq.front()] + nums[i];
 
-            while (!dq.empty() && nums[dq.back()] <= nums[i]) dq.pop_back();
+            while (!dq.empty() && nums[dq.back()] <= nums[i])
+                dq.pop_back();
             dq.push_back(i);
 
-            if (i - dq.front() >= k) dq.pop_front();
+            if (i - dq.front() >= k)
+                dq.pop_front();
         }
 
         return nums.back();

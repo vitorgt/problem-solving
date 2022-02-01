@@ -7,7 +7,8 @@ class Solution { // O(n) time, O(1) space, TLE
             //  715827882 = 0b 0010 1010 1010 1010 1010 1010 1010 1010
             int odd = i & 1431655765;
             int even = i & 715827882;
-            if (!(odd & (even << 1)) && !(odd & (even >> 1))) cnt++;
+            if (!(odd & (even << 1)) && !(odd & (even >> 1)))
+                cnt++;
         }
         return cnt;
     }

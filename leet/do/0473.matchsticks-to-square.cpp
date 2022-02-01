@@ -5,15 +5,18 @@ const int INF = 0x3f3f3f3f;
 
 class Solution {
   public:
-    bool makesquare(vector<int>& matchsticks) {
-        if (matchsticks.size() <= 3) return false;
+    bool makesquare(vector<int> &matchsticks) {
+        if (matchsticks.size() <= 3)
+            return false;
 
         int s = accumulate(matchsticks.begin(), matchsticks.end());
 
         map<int, int> m;
-        for (size_t i = 0; i < matchsticks.size(); i++) m[matchsticks[i]]++;
+        for (size_t i = 0; i < matchsticks.size(); i++)
+            m[matchsticks[i]]++;
 
-        if (s % 4 || m.rbegin()->first > s / 4) return false;
+        if (s % 4 || m.rbegin()->first > s / 4)
+            return false;
 
         vector<int> p(4, 0);
 
@@ -26,7 +29,7 @@ class Solution {
     }
 };
 
-int main(int argc, const char** argv) {
+int main(int argc, const char **argv) {
     std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
     ;

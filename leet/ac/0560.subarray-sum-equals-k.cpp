@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int subarraySum(vector<int>& nums, int k) {
+    int subarraySum(vector<int> &nums, int k) {
         const int n = nums.size();
         int count = 0, acc = 0;
         unordered_map<int, int> countAcc;

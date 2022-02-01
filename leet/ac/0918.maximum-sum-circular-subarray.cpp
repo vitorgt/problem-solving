@@ -1,6 +1,6 @@
-class Solution {  // based on https://leetcode.com/lee215/ solution
+class Solution { // based on https://leetcode.com/lee215/ solution
   public:
-    int maxSubarraySumCircular(vector<int>& A) {
+    int maxSubarraySumCircular(vector<int> &A) {
         int allSum = 0;
         int maxSum = A[0], curMax = 0;
         int minSum = A[0], curMin = 0;
@@ -15,9 +15,9 @@ class Solution {  // based on https://leetcode.com/lee215/ solution
     }
 };
 
-class SolutionB {  // works but O(n^2)
+class SolutionB { // works but O(n^2)
   public:
-    int maxSubarraySumCircular(vector<int>& A) {
+    int maxSubarraySumCircular(vector<int> &A) {
         const int n = A.size(), n2 = 2 * n;
         long long maxSum = A[0];
         vector<long long> acc(n2, 0);

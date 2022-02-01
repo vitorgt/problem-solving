@@ -19,9 +19,7 @@ class Trie {
 
   public:
     /** Initialize your data structure here. */
-    Trie() {
-        root = new Node();
-    }
+    Trie() { root = new Node(); }
 
     /** Inserts a word into the trie. */
     void insert(string word) {

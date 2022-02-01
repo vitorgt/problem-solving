@@ -1,10 +1,11 @@
-class Solution {  // based on https://leetcode.com/nathanni solution
+class Solution { // based on https://leetcode.com/nathanni solution
   public:
     vector<int> findAnagrams(string s, string p) {
         const int sl = s.length(), pl = p.length();
         int left = 0, right = 0, count = pl;
         vector<int> ans;
-        if (pl > sl) return ans;
+        if (pl > sl)
+            return ans;
         vector<int> hash('z' + 1, 0);
         for (char c : p) {
             hash[c]++;
@@ -30,12 +31,13 @@ class Solution {  // based on https://leetcode.com/nathanni solution
     }
 };
 
-class SolutionB {  // my solution works, but slower
+class SolutionB { // my solution works, but slower
   public:
     vector<int> findAnagrams(string s, string p) {
         const int sl = s.length(), pl = p.length();
         vector<int> ans;
-        if (pl > sl) return ans;
+        if (pl > sl)
+            return ans;
         sort(p.begin(), p.end());
         for (int i = 0; i + pl <= sl; i++) {
             string c(s.begin() + i, s.begin() + i + pl);

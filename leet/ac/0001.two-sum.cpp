@@ -1,6 +1,6 @@
 class Solution {
   public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int> &nums, int target) {
         const int n = nums.size();
         int need = 0;
         unordered_map<int, vector<int>> pos;
@@ -12,7 +12,8 @@ class Solution {
             need = target - i;
             if (!pos[need].empty()) {
                 if (i == need) {
-                    if (pos[need].size() > 1) return pos[need];
+                    if (pos[need].size() > 1)
+                        return pos[need];
                 } else {
                     ans.push_back(pos[i][0]);
                     ans.push_back(pos[need][0]);

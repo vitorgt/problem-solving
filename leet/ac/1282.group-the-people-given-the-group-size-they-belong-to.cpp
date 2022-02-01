@@ -1,6 +1,6 @@
 class Solution {
   public:
-    vector<vector<int>> groupThePeople(vector<int>& groupSizes) {
+    vector<vector<int>> groupThePeople(vector<int> &groupSizes) {
         const int n = groupSizes.size();
         vector<vector<int>> ans;
         unordered_map<int, vector<int>> groups;

@@ -10,15 +10,18 @@ class Solution {
         return board;
     }
 
-    int solve(const vector<unordered_set<char>>& board, int n) {
-        if (n < 0) return 1;
+    int solve(const vector<unordered_set<char>> &board, int n) {
+        if (n < 0)
+            return 1;
 
         for (int i = 0; i <= n; i++)
-            if (board[i].empty()) return 0;
+            if (board[i].empty())
+                return 0;
 
         int success = 0;
 
-        for (char i : board[n]) success += solve(change(board, i, n), n - 1);
+        for (char i : board[n])
+            success += solve(change(board, i, n), n - 1);
 
         return success;
     }
@@ -28,7 +31,8 @@ class Solution {
         vector<unordered_set<char>> board(n);
 
         for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++) board[i].insert(j);
+            for (int j = 0; j < n; j++)
+                board[i].insert(j);
 
         return solve(board, n - 1);
     }

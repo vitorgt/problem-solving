@@ -1,10 +1,12 @@
 #include "../ListNode.hpp"
 
-class Solution {  // based on https://leetcode.com/yangliguang solution
+class Solution { // based on https://leetcode.com/yangliguang solution
   public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        if (!l1) return l2;
-        if (!l2) return l1;
+    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
+        if (!l1)
+            return l2;
+        if (!l2)
+            return l1;
         if (l1->val < l2->val) {
             l1->next = mergeTwoLists(l1->next, l2);
             return l1;
@@ -15,12 +17,15 @@ class Solution {  // based on https://leetcode.com/yangliguang solution
     }
 };
 
-class SolutionB {  // my iterative solution O(n) time, O(1) space
+class SolutionB { // my iterative solution O(n) time, O(1) space
   public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        if (!l1 && !l2) return l1;
-        if (l1 && !l2) return l1;
-        if (!l1 && l2) return l2;
+    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
+        if (!l1 && !l2)
+            return l1;
+        if (l1 && !l2)
+            return l1;
+        if (!l1 && l2)
+            return l2;
         ListNode *head = NULL, *aux = NULL, *aux1 = l1, *aux2 = l2;
         if (aux1->val < aux2->val) {
             head = aux1;

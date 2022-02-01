@@ -11,7 +11,8 @@ int main(int argc, const char **argv) {
 
     while (n--) {
         cin >> a >> b >> c;
-        if (a + b + c > 1) willdo++;
+        if (a + b + c > 1)
+            willdo++;
     }
 
     cout << willdo << endl;

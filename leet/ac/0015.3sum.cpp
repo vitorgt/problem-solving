@@ -1,6 +1,6 @@
 class Solution {
   public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
+    vector<vector<int>> threeSum(vector<int> &nums) {
         const int n = nums.size();
         int target = 0, front = 0, rear = 0, sum = 0;
         vector<vector<int>> ans;
@@ -9,7 +9,8 @@ class Solution {
             target = -nums[i];
             front = i + 1;
             rear = n - 1;
-            if (nums[i] > 0) break;
+            if (nums[i] > 0)
+                break;
             while (front < rear) {
                 sum = nums[front] + nums[rear];
                 if (sum < target)
@@ -17,8 +18,7 @@ class Solution {
                 else if (sum > target)
                     rear--;
                 else {
-                    vector<int> triplet{nums[i], nums[front],
-                                        nums[rear]};
+                    vector<int> triplet{nums[i], nums[front], nums[rear]};
                     ans.push_back(triplet);
                     while (front < rear && nums[front] == triplet[1])
                         front++;
@@ -26,16 +26,17 @@ class Solution {
                         rear--;
                 }
             }
-            while (i + 1 < n && nums[i + 1] == nums[i]) i++;
+            while (i + 1 < n && nums[i + 1] == nums[i])
+                i++;
         }
         return ans;
     }
 };
 
-class SolutionB {  // works but slower than the above, therefore
-                   // abandoned
+class SolutionB { // works but slower than the above, therefore
+                  // abandoned
   public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
+    vector<vector<int>> threeSum(vector<int> &nums) {
         // a + b + c = 0
         // a + b = -c
         unordered_map<int, int> freq;

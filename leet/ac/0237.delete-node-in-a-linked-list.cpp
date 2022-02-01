@@ -2,7 +2,7 @@
 
 class Solution {
   public:
-    void deleteNode(ListNode* node) {
+    void deleteNode(ListNode *node) {
         if (node && node->next && node->next->next) {
             node->val = node->next->val;
             deleteNode(node->next);

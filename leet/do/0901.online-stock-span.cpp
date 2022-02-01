@@ -15,9 +15,7 @@ class StockSpanner {
     map<int, int> span;
 
   public:
-    StockSpanner() {
-        this->day = 0;
-    }
+    StockSpanner() { this->day = 0; }
 
     int next(int price) {
         cout << "in " << price << endl;

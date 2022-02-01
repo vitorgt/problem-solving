@@ -18,9 +18,11 @@ int main(int argc, const char **argv) {
         for (int i = 1; i <= n; i++) {
             cin >> a;
             as.push_back(a);
-            if (a != as[0]) diff = 1;
+            if (a != as[0])
+                diff = 1;
         }
-        if (!diff) cout << "NO\n";
+        if (!diff)
+            cout << "NO\n";
         else {
             cout << "YES\n";
             int i = 0, diff = 0;

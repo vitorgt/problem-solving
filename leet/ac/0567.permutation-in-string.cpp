@@ -4,7 +4,8 @@ class Solution {
         std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
         const int l2 = s2.length(), l1 = s1.length();
         int left = 0, right = 0, count = l1;
-        if (l1 > l2) return false;
+        if (l1 > l2)
+            return false;
         vector<int> hash('z' + 1, 0);
         for (char c : s1) {
             hash[c]++;

@@ -60,7 +60,8 @@ int main(int argc, const char **argv) {
         // }
         ms = 0;
         for (char c : desc[i]) {
-            if (c == 'm') ms++;
+            if (c == 'm')
+                ms++;
         }
         cout << ms + 1 << endl;
     }

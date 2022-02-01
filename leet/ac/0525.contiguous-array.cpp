@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int findMaxLength(vector<int>& nums) {
+    int findMaxLength(vector<int> &nums) {
         int bal = 0, maxBal = 0;
         map<int, vector<int>> dist;
         dist[bal].push_back(-1);

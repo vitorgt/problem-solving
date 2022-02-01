@@ -17,23 +17,28 @@ class SolutionA { // TLE
             } else if (j < s1.size()) {
                 // k (s3) is over
                 for (; i < s3.size() && j < s1.size(); i++, j++)
-                    if (s3[i] != s1[j]) return false;
+                    if (s3[i] != s1[j])
+                        return false;
 
-                if (i == s3.size() && j == s1.size()) return true;
+                if (i == s3.size() && j == s1.size())
+                    return true;
                 else
                     return false;
             } else if (k < s2.size()) {
                 // j (s2) is over
                 for (; i < s3.size() && k < s2.size(); i++, k++)
-                    if (s3[i] != s2[k]) return false;
+                    if (s3[i] != s2[k])
+                        return false;
 
-                if (i == s3.size() && k == s2.size()) return true;
+                if (i == s3.size() && k == s2.size())
+                    return true;
                 else
                     return false;
             } else
                 return false; // j (s2) and k (s3) are over but i (s1) is not
         }
-        if (s3.size() == 0 && s1.size() == 0 && s2.size() == 0) return true;
+        if (s3.size() == 0 && s1.size() == 0 && s2.size() == 0)
+            return true;
         return false;
     }
 };
@@ -41,7 +46,8 @@ class SolutionA { // TLE
 class Solution {
   public:
     bool isInterleave(string s1, string s2, string s3) {
-        if (s1.size() + s2.size() != s3.size()) return false;
+        if (s1.size() + s2.size() != s3.size())
+            return false;
 
         size_t m = s1.size(), n = s2.size();
 

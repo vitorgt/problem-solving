@@ -12,12 +12,14 @@ class FirstUnique {
     }
 
     int indexFirstUnique() {
-        if (sorted.empty()) return -1;
+        if (sorted.empty())
+            return -1;
         return sorted.front().second;
     }
 
     char showFirstUnique() {
-        if (sorted.empty()) return -1;
+        if (sorted.empty())
+            return -1;
         return sorted.front().first;
     }
 
@@ -26,8 +28,7 @@ class FirstUnique {
         auto n = repeated.find(value);
         if (u == unique.end() && n == repeated.end()) {
             // if isnt in both uniques and not uniques
-            unique[value] =
-                sorted.insert(sorted.end(), make_pair(value, i));
+            unique[value] = sorted.insert(sorted.end(), make_pair(value, i));
         } else if (u != unique.end()) {
             // found on unique
             sorted.erase(unique[value]);

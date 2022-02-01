@@ -2,8 +2,8 @@
 
 class Solution {
   public:
-    bool isCompleteTree(TreeNode* root) {
-        vector<TreeNode*> bfs;
+    bool isCompleteTree(TreeNode *root) {
+        vector<TreeNode *> bfs;
         bfs.push_back(root);
         int i = 0;
         while (i < bfs.size() && bfs[i]) {

@@ -19,7 +19,8 @@ class FirstUnique {
     }
 
     int showFirstUnique() {
-        if (sorted.empty()) return -1;
+        if (sorted.empty())
+            return -1;
         return sorted.front();
     }
 
@@ -38,7 +39,7 @@ class FirstUnique {
     }
 };
 
-class FirstUniqueB {  // first try, may work, abandoned
+class FirstUniqueB { // first try, may work, abandoned
   private:
     class Node {
       public:
@@ -48,8 +49,7 @@ class FirstUniqueB {  // first try, may work, abandoned
             this->val = v;
             this->next = NULL;
         }
-        ~Node() {
-        }
+        ~Node() {}
     };
     Node *head, *tail;
     unordered_map<int, Node *> addr;
@@ -95,9 +95,7 @@ class FirstUniqueB {  // first try, may work, abandoned
             add(i);
         }
     }
-    int showFirstUnique() {
-        return head->val;
-    }
+    int showFirstUnique() { return head->val; }
     void add(int value) {
         auto u = uniques.find(i), n = notu.find(i);
         if (u == uniques.end() && n == notu.end()) {
@@ -109,8 +107,8 @@ class FirstUniqueB {  // first try, may work, abandoned
             uniques.erase(i);
             pop(addr[i]);
             notu.insert(i);
-        }  // else if(n != notu.end()) {
-           // found on not uniques, do nothing
-           //}
+        } // else if(n != notu.end()) {
+          // found on not uniques, do nothing
+          //}
     }
 };

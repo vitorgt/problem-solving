@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int search(vector<int>& nums, int target) {
+    int search(vector<int> &nums, int target) {
         if (nums.begin() != nums.end()) {
             int minP = nums.size() - 1, minN = nums[minP];
             int l = 0, m = 0, h = nums.size() - 1;
@@ -9,7 +9,8 @@ class Solution {
                 m = floor(l + (h - l) / 2);
                 if (nums[l] <= nums[m] && nums[m] <= nums[h]) {
                     // is sorted
-                    while (l > 0 && nums[l - 1] < nums[l]) l--;
+                    while (l > 0 && nums[l - 1] < nums[l])
+                        l--;
                     if (nums[l] < minN) {
                         minN = nums[l];
                         minP = l;
@@ -32,8 +33,7 @@ class Solution {
                     cout << endl;
                 }
             }
-            if (nums[minP] <= target &&
-                target <= nums[nums.size() - 1]) {
+            if (nums[minP] <= target && target <= nums[nums.size() - 1]) {
                 l = minP;
                 h = nums.size() - 1;
             } else {

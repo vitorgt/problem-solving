@@ -1,6 +1,6 @@
 #include "../TreeNode.hpp"
 
-class Solution {  // O(n)
+class Solution { // O(n)
   public:
     const int INF = 0x3f3f3f3f;
     int i = 0;
@@ -10,10 +10,8 @@ class Solution {  // O(n)
             TreeNode *root = new TreeNode(key);
             i++;
             if (i < preorder.size()) {
-                root->left =
-                    bstFromPreorder(preorder, preorder[i], min, key);
-                root->right =
-                    bstFromPreorder(preorder, preorder[i], key, max);
+                root->left = bstFromPreorder(preorder, preorder[i], min, key);
+                root->right = bstFromPreorder(preorder, preorder[i], key, max);
             }
             return root;
         }
@@ -24,7 +22,7 @@ class Solution {  // O(n)
     }
 };
 
-class solutionB {  // O(n^2)
+class solutionB { // O(n^2)
   public:
     TreeNode *bstFromPreorder(vector<int> &preorder) {
         TreeNode *root = new TreeNode(preorder[0]), *aux = root;

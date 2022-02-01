@@ -19,10 +19,8 @@ class LFUCache {
         this->capacity = capacity;
         this->used = 0;
     }
-    int get(int key) {
-    }
-    void put(int key, int value) {
-    }
+    int get(int key) {}
+    void put(int key, int value) {}
 };
 
 class LRUCache {

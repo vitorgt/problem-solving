@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int minCostClimbingStairs(vector<int>& cost) {
+    int minCostClimbingStairs(vector<int> &cost) {
         const int n = cost.size();
         for (int i = 2; i < n; i++) {
             cost[i] = min(cost[i - 2], cost[i - 1]) + cost[i];
@@ -11,7 +11,7 @@ class Solution {
 
 class SolutionB {
   public:
-    int minCostClimbingStairs(vector<int>& cost) {
+    int minCostClimbingStairs(vector<int> &cost) {
         const int n = cost.size();
         vector<int> accCost(n, 0);
         accCost[0] = cost[0];

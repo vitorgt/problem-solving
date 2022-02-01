@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
 #include "../TreeNode.hpp"
+#include <bits/stdc++.h>
 using namespace std;
 
 const int INF = 0x3f3f3f3f;
@@ -10,7 +10,8 @@ class Solution {
         int lvlCount = 1, nextLvlCount = 0;
         TreeNode *aux = NULL;
         vector<vector<int>> ans;
-        if (!root) return ans;
+        if (!root)
+            return ans;
         queue<TreeNode *> q;
         q.push(root);
         while (!q.empty()) {
