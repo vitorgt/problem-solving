@@ -31,10 +31,11 @@ const int INF = 0x3f3f3f3f;
 int main(int argc, const char **argv) {
     std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
-    int n = 0;
+    unsigned long n = 0;
     string a = "", b = "";
     unordered_set<string> s;
     cin >> n;
+
     getline(cin, a);
     getline(cin, a);
     getline(cin, b);
