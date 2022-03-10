@@ -9,6 +9,20 @@ Repository to store my solutions of contests' problems.
     <tr>
       <td>
         <img
+          src="https://adventofcode.com/favicon.png"
+          width="50px"
+        />
+      </td>
+      <td>
+        <a href="aoc/">Advent of Code</a>
+      </td>
+      <td>
+        vitorgt
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img
           src="https://codeforces.org/s/0/android-icon-192x192.png"
           width="50px"
         />
@@ -23,6 +37,34 @@ Repository to store my solutions of contests' problems.
     <tr>
       <td>
         <img
+          src="https://dg8krxphbh767.cloudfront.net/meta/apple-touch-icon.png"
+          width="50px"
+        />
+      </td>
+      <td>
+        <a href="ex/">Exercism</a>
+      </td>
+      <td>
+        <a href="https://exercism.org/profiles/vitorgt">vitorgt</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img
+          src="https://hrcdn.net/community-frontend/assets/favicon-ddc852f75a.png"
+          width="50px"
+        />
+      </td>
+      <td>
+        <a href="hr/">HackerRank</a>
+      </td>
+      <td>
+        <a href="https://www.hackerrank.com/vitorgt">vitorgt</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img
           src="https://assets.leetcode.com/static_assets/public/icons/favicon-192x192.png"
           width="50px"
         />
@@ -32,6 +74,20 @@ Repository to store my solutions of contests' problems.
       </td>
       <td>
         <a href="https://leetcode.com/vitorgt/">vitorgt</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img
+          src="https://projecteuler.net/favicons/apple-touch-icon.png"
+          width="50px"
+        />
+      </td>
+      <td>
+        <a href="euler/">Project Euler</a>
+      </td>
+      <td>
+        <a href="https://projecteuler.net/progress=vitorgt">vitorgt</a>
       </td>
     </tr>
     <tr>
