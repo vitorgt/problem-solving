@@ -93,6 +93,20 @@ Repository to store my solutions of contests' problems.
     <tr>
       <td>
         <img
+          src="https://onlinejudge.org/images/favicon.ico"
+          width="50px"
+        />
+      </td>
+      <td>
+        <a href="uva/">UVa</a>
+      </td>
+      <td>
+        <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_authorstats&userid=1037701">vitorhgt</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img
           src="https://vjudge.net/static/images/favicon.ico"
           width="50px"
         />
