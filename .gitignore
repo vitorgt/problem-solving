@@ -1,3 +1,6 @@
 rand
 .vscode
 .in
+
+.swift-format
+.clang-format
