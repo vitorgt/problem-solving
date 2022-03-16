@@ -1,7 +1,7 @@
 stdin <- file("stdin")
 open(stdin)
 
-readLines(stdin, n = 1, warn = FALSE) # Consumes line to ignore `n`
+invisible(readLines(stdin, n = 1, warn = FALSE)) # Consumes line to ignore `n`
 x <- as.integer(strsplit(trimws(
   readLines(stdin, n = 1, warn = FALSE), which = "both"), " ")[[1]])
 
