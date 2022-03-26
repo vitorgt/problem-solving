@@ -3,47 +3,47 @@ func getCard(at index: Int, from stack: [Int]) -> Int {
 }
 
 func setCard(at index: Int, in stack: [Int], to newCard: Int) -> [Int] {
-  var stack = stack
-  if index < stack.count && index >= 0 {
-    stack[index] = newCard
+  var s = stack
+  if 0 <= index && index < s.count {
+    s[index] = newCard
   }
-  return stack
+  return s
 }
 
 func insert(_ newCard: Int, atTopOf stack: [Int]) -> [Int] {
-  var stack = stack
-  stack.append(newCard)
-  return stack
+  var s = stack
+  s.append(newCard)
+  return s
 }
 
 func removeCard(at index: Int, from stack: [Int]) -> [Int] {
-  var stack = stack
-  if index < stack.count && index >= 0 {
-    stack.remove(at: index)
+  var s = stack
+  if 0 <= index && index < s.count {
+    s.remove(at: index)
   }
-  return stack
+  return s
 }
 
 func removeTopCard(_ stack: [Int]) -> [Int] {
-  var stack = stack
-  if stack.count >= 0 {
-    stack.removeLast(1)
+  var s = stack
+  if s.count > 0 {
+    s.removeLast(1)
   }
-  return stack
+  return s
 }
 
 func insert(_ newCard: Int, atBottomOf stack: [Int]) -> [Int] {
-  var stack = stack
-  stack.insert(newCard, at: 0)
-  return stack
+  var s = stack
+  s.insert(newCard, at: 0)
+  return s
 }
 
 func removeBottomCard(_ stack: [Int]) -> [Int] {
-  var stack = stack
-  if stack.count >= 0 {
-    stack.remove(at: 0)
+  var s = stack
+  if s.count > 0 {
+    s.remove(at: 0)
   }
-  return stack
+  return s
 }
 
 func checkSizeOfStack(_ stack: [Int], _ size: Int) -> Bool {

@@ -1,10 +1,10 @@
 # Problem solving
 
-Repository to store my solutions of contests' problems.
+Repository to my solutions of contests' problems.
 
 ## Accounts
 
-<table>
+<table align="center">
   <tbody>
     <tr>
       <td>
