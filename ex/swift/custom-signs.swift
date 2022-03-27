@@ -12,6 +12,4 @@ func graduationFor(name: String, year: Int) -> String {
   return "Congratulations \(name)!\nClass of \(year)"
 }
 
-func costOf(sign: String) -> Int {
-  return 20 + sign.count * 2
-}
+func costOf(sign: String) -> Int { return 20 + sign.count * 2 }

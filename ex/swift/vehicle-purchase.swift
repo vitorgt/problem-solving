@@ -11,15 +11,12 @@ func canIBuy(vehicle: String, price: Double, monthlyBudget: Double) -> String {
 }
 
 func licenseType(numberOfWheels wheels: Int) -> String {
-  switch wheels {
-    case 2, 3:
-      return "You will need a motorcycle license for your vehicle"
-    case 4, 6:
-      return "You will need an automobile license for your vehicle"
+  switch wheels {  //
+    case 2, 3: return "You will need a motorcycle license for your vehicle"
+    case 4, 6: return "You will need an automobile license for your vehicle"
     case 18:
       return "You will need a commercial trucking license for your vehicle"
-    default:
-      return "We do not issue licenses for those types of vehicles"
+    default: return "We do not issue licenses for those types of vehicles"
   }
 }
 

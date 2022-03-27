@@ -1,3 +1,1 @@
-func hello(name: String = "World") -> String {
-  return "Hello, \(name)!"
-}
+func hello(name: String = "World") -> String { return "Hello, \(name)!" }

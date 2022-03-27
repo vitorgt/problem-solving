@@ -13,6 +13,5 @@ func workdaysIn(budget: Double, hourlyRate: Int, withDiscount discount: Double)
   -> Double
 {
   return floor(
-    (budget / (1 - (discount / 100.0)))
-      / dailyRateFrom(hourlyRate: hourlyRate))
+    (budget / (1 - (discount / 100.0))) / dailyRateFrom(hourlyRate: hourlyRate))
 }
