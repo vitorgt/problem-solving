@@ -3,7 +3,7 @@
 ## Naming pattern
 
 ```
-swift/lasagna.swift
+swift.lasagna.swift
 -----               Track id
       -------       Problem id
 ```
